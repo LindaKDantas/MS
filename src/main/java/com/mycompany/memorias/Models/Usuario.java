@@ -41,6 +41,8 @@ public class Usuario implements Serializable {
 
     private String senha;
     
+    private String descricao;
+    
     @LazyCollection(LazyCollectionOption.FALSE)
     @OneToMany(cascade = ALL, mappedBy = "autor")
     private List<Memorias> memoriasCriadas;
@@ -48,6 +50,14 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    
     public List<Memorias> getMemoriasCriadas() {
         return memoriasCriadas;
     }

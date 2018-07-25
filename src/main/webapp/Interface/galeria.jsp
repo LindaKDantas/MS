@@ -19,11 +19,14 @@
         <div class="page-wrap">
 
             <!-- Nav -->
-            <nav id="nav">
+              <nav id="nav">
                 <ul>
-                    <li><a href="menu.jsp" title="Menu Inicial" ><span class="icon fa-home"></span></a></li>
-                    <li><a href="galeria.jsp" title="Galeria"class="active"><span class="icon fa-camera-retro"></span></a></li>
-                    <li><a href="Perfil.jsp" title="Perfil"><span class="icon fa-file-text-o"></span></a></li>
+                    <li><a href="menu.jsp" title="Menu Inicial" class="active"><span class="icon fa-home"></span></a></li>
+                    <li><a href="galeria.jsp" title="Galeria de Fotos"><span class="icon fa-camera-retro"></span></a></li>
+                    <li><a href="Perfil.jsp" title="Meu Perfil"><span class="icon fa-file-text-o"></span></a></li>
+                     <li><a href="menu.jsp" title="Sair" class="active"><span class="icon fa-sign-out-alt"></span></a></li>  
+                     <li><a href="/Memorias/LoginUsuario" title="Sair" class="active"><span class="icon fa-sign-out-alt"></span></a></li>
+
                 </ul>
             </nav>
 
@@ -32,7 +35,7 @@
 
                 <!-- Header -->
                 <header id="header">
-                    <div>Clique nas figuras para abrir a história referente</div>
+                    <div>Clique nas figuras vê-las ampliadas.</div>
                 </header>
 
                 <!-- Gallery -->
@@ -44,16 +47,12 @@
                         <!-- Filters -->
                         <header>
                             <h1>Memórias</h1>
-                            <h4>Procure por memórias específicas </h4>
+                            <h4>Pesquise pelo nome:</h4>
+                            <h4>Procure por memórias específicas, </h4>
                             <form method="get" action="">
                                 <input name="pesquisa" id="searching" type="search" placeholder="Procurar">
                             </form>
-                            <ul class="tabs">
-                                <li><a href="#" data-tag="all" class="button active">Todos</a></li>
-                                <li><a href="#" data-tag="people" class="button">Pessoas</a></li>
-                                <li><a href="#" data-tag="groups" class="button">Grupos</a></li>
-                                <li><a href="#" data-tag="family" class="button">Famílias</a></li>
-                            </ul>
+                        
                         </header>
 
                         <div class="content">
@@ -110,35 +109,11 @@
                 <section id="contact">
                     <!-- Social -->
                     <div class="social column">
-
-                        <h3>Siga nossas redes sociais</h3>
+                        <h3>Siga-me nas redes sociais</h3>
                         <ul class="icons">
-                            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="https://www.facebook.com/linda.dasilvadantas?ref=bookmarks" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                            <li><a href="https://www.instagram.com/stou_linda/?hl=pt-br" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
                         </ul>
-                    </div>
-
-                    <!-- Form -->
-                    <div class="column">
-                        <h3>Alguma dúvida ou Reclamação?<br>Entre em contato conosco.</h3>
-                        <form action="#" method="post">
-                            <div class="field half first">
-                                <label for="name">Nome</label>
-                                <input name="name" id="name" type="text" placeholder="Name">
-                            </div>
-                            <div class="field half">
-                                <label for="email">Email</label>
-                                <input name="email" id="email" type="email" placeholder="Email">
-                            </div>
-                            <div class="field">
-                                <label for="message">Mensagem</label>
-                                <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-                            </div>
-                            <ul class="actions">
-                                <li><input value="Enviar Mensagem" class="button" type="submit"></li>
-                            </ul>
-                        </form>
                     </div>
 
                 </section>

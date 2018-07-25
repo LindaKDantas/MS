@@ -24,7 +24,7 @@
                     <li><a href="menu.jsp" title="Menu Inicial"><span class="icon fa-home"></span></a></li>
                     <li><a href="galeria.jsp" title="Galeria de Fotos"><span class="icon fa-camera-retro"></span></a></li>
                     <li><a href="Perfil.jsp" title="Meu Perfil" class="active"><span class="icon fa-file-text-o"></span></a></li>
-                    <li><a href="menu.jsp" title="Sair" class="active"><span class="icon fa-sign-out-alt"></span></a></li>
+            
                 </ul>
             </nav>
 
@@ -34,6 +34,8 @@
                 <!-- Header -->
                 <header id="header">
                     <div><%=u.getNome()%></div>
+                    
+                    <div id="logout"> <a href="/Memorias/LoginUsuario" class="button">Sair</a><div> 
                 </header>
 
                 <!-- Section -->
@@ -43,9 +45,7 @@
                             <h1>Quem sou eu?</h1>
                         </header>
 
-                        <p> Meu nome é Linda Karoline Dantas, mas ninguém me chama de Karoline; <br>
-                            Por hora eu só quero conseguir entregar meu projeto sem ter de cortar os pulsos para isso.
-                            Não costumo desistir então, vamos em frente.<br>
+                        <p> <%=u.getDescricao()%><br>
                             <a class="button" href="AlterarPerfil.jsp">Alterar Informações</a></p>
 
                         <header>
@@ -75,10 +75,10 @@
                 <section id="contact">
                     <!-- Social -->
                     <div class="social column">
-                        <h3>Siga nossas redes sociais</h3>
+                        <h3>Siga-me nas redes sociais</h3>
                         <ul class="icons">
                             <li><a href="https://www.facebook.com/linda.dasilvadantas?ref=bookmarks" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                             <li><a href="https://www.instagram.com/stou_linda/?hl=pt-br" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="https://www.instagram.com/stou_linda/?hl=pt-br" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
                         </ul>
                     </div>
 

@@ -1,3 +1,4 @@
+<%@page import="com.mycompany.memorias.Models.Usuario"%>
 <%@page import="java.io.FileReader"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
@@ -12,9 +13,8 @@
     <body>
         <%@page import="javax.servlet.http.*"%>
         <%@page import="javax.script.*"%>
-
-        <%
-   %>
+        <%Usuario u = (Usuario) request.getSession().getAttribute("usuario_logado");%>
+        
         <div class="page-wrap">
 
             <!-- Nav -->
@@ -23,7 +23,6 @@
                     <li><a href="menu.jsp" title="Menu Inicial" class="active"><span class="icon fa-home"></span></a></li>
                     <li><a href="galeria.jsp" title="Galeria de Fotos"><span class="icon fa-camera-retro"></span></a></li>
                     <li><a href="Perfil.jsp" title="Meu Perfil"><span class="icon fa-file-text-o"></span></a></li>
-                     <li><a href="menu.jsp" title="Sair" class="active"><span class="icon fa-sign-out-alt"></span></a></li>
                 </ul>
             </nav>
 

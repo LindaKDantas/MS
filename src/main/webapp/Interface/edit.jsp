@@ -21,44 +21,12 @@
 
             <section id="edit">
                 <%Memorias m = (Memorias) request.getSession().getAttribute("memoria");%>
-                <div align="center"><h5 align="center"><span class="image left special"><img src="data:image/jpg;base64,<%=Base64.getEncoder().encodeToString(m.getFoto())%>" height="260" width="" alt=""><a class="button" value="alterar">alterar imagem</a></span></h5></div>
+                
+                <div align="center"><h5 align="center"><span class="image left special"><img src="data:image/jpg;base64,<%=Base64.getEncoder().encodeToString(m.getFoto())%>" height="260" width="" alt=""><br>
+                            <label id="ImagemM">Imagem atual:</label></div>
                 <h4  align="left">
-                    <!--form action="/Memorias/AdicionaMemoria" method="post" enctype="multipart/form-data">
-                        <div class="field half">
-                            <label for="nameM">Nome da memória</label>
-                            <input name="nameM" id="nameM" type="text" placeholder="Novo Nome" value="<%=m.getNome()%>">
-                        </div>
-                        
-                        <div class="field half first">
-                            <label for="descriptionM">Descrição da Memória</label>
-                            <textarea name="descriptionM" id="descriptionM" type="text" placeholder="Altere o corpo da sua memória." ><%=m.getDescricao()%></textarea>
-                        </div>
-                        <div class="field half first">
-                            <label for="nameM">Marcar Pessoas<br><h6>(utilize @example, @example2)</h6></label>
-                            <input name="nameM" id="nameM" type="text" placeholder="Quem estava lá." value="<%=m.getUsuarios()%>">
-                        </div>
-                        <div>
-                            <fieldset>
-                                <legend>A visualização está disponivel...</legend>
-                                <input type="checkbox" name="option1" value="markeds" />Apenas para marcados <br />
-                                <input type="checkbox" name="option2" value="me" />Apenas para mim<br />
-                                <input type="checkbox" name="option3" value="all" checked/>para todos<br /><br/>
 
-                            </fieldset>
-                            <fieldset>
-                                <legend>A memória pertence a...</legend>
-                                <input type="checkbox" name="option4" value="people" />uma pessoa <br />
-                                <input type="checkbox" name="option5" value="group" checked/>um grupo<br />
-                                <input type="checkbox" name="option6" value="family" />uma família<br />
-
-                            </fieldset>
-                        </div>    
-                        <div align="center">
-                            <p><br></p>
-                            <input type="submit" value="atualizar" name="acao" href="Perfil.jsp"/>
-                        </div>
-                    </form-->
-                            <form action="/Memorias/AdicionaMemoria" method="post" enctype="multipart/form-data">
+                            <form action="/Memorias/EditarMemoria" method="post" enctype="multipart/form-data">
                             <div class="field half first">
                                 <label for="nameM">Nome da memória</label>
                                 <input name="nameM" id="nameM" type="text" placeholder="Ex: A viagem a França. " value="<%=m.getNome()%>">
@@ -73,7 +41,7 @@
 
                             <div class="field half first">
                                 <label for="dataM">Data da Memória</label>
-                                <input name="dataM" id="dataM" type="text" placeholder="dd/MM/yyyy"></input>
+                                <input name="dataM" id="dataM" type="text" placeholder="dd/MM/yyyy" value="<%=m.getDataDoFato()%>"></input>
                             </div>
 
                             <div class="field half first">
@@ -99,7 +67,7 @@
                             </div>
 
                             <div>
-                                <input type="submit" value="atualizar" name="acao" href="Perfil.jsp">
+                                <input type="submit" value="atualizar" href="Perfil.jsp">
                             </div>
 
                         </form>

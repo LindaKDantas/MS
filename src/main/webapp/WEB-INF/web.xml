@@ -12,10 +12,6 @@
         <servlet-name>AdicionaMemoria</servlet-name>
         <servlet-class>com.mycompany.memorias.Servlet.Usuario.AdicionaMemoria</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>EditarMemoria</servlet-name>
-        <servlet-class>com.mycompany.memorias.Servlet.Usuario.EditarMemoria</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>CadastroUsuario</servlet-name>
         <url-pattern>/CadastroUsuario</url-pattern>
@@ -28,13 +24,9 @@
         <servlet-name>AdicionaMemoria</servlet-name>
         <url-pattern>/AdicionaMemoria</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>EditarMemoria</servlet-name>
-        <url-pattern>/EditarMemoria</url-pattern>
-    </servlet-mapping>
     <session-config>
         <session-timeout>
-            30
+            15
         </session-timeout>
     </session-config>
     <listener>

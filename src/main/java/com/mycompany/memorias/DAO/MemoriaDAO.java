@@ -44,19 +44,6 @@ public class MemoriaDAO {
         }
         return memorias;
     }
-    /*public String salvar(Usuario usuario){
-        s = HibernateFactory.getSessionFactory().openSession();
-        
-        try{
-            s.beginTransaction();
-            
-        }
-    }*/
-    
-    public String atualizar(Memorias memoria){
-        s = HibernateFactory.getSessionFactory().openSession();
-        return hue.atualizar(memoria);
-    }
     
     public static List<Memorias> pesquisarPorNome(String pesquisa) {
         List<Memorias> memorias = null;

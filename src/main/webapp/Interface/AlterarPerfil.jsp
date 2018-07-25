@@ -1,3 +1,4 @@
+<%@page import="com.mycompany.memorias.Models.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 
@@ -9,14 +10,17 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
     <body>
+        <%Usuario u = (Usuario) request.getSession().getAttribute("usuario_logado");%>
         <div class="page-wrap">
-				<nav id="nav">	
-                    <ul>
-						<li><a href="menu.html" ><span class="icon fa-home"></span></a></li>
-						<li><a href="galeria.html"><span class="icon fa-camera-retro"></span></a></li>
-						<li><a href="generic.html"class="active"><span class="icon fa-file-text-o"></span></a></li>
-					</ul>
-				</nav>
+				  <nav id="nav">
+                <ul>
+                    <li><a href="menu.jsp" title="Menu Inicial" class="active"><span class="icon fa-home"></span></a></li>
+                    
+                    <li><a href="galeria.jsp" title="Galeria de Fotos"><span class="icon fa-camera-retro"></span></a></li>
+                    <li><a href="Perfil.jsp" title="Meu Perfil"><span class="icon fa-file-text-o"></span></a></li>
+                     <li><a href="menu.jsp" title="Sair" class="active"><span class="icon fa-sign-out-alt"></span></a></li>  
+                </ul>
+            </nav>
             
             <section id="perfil">
                    
